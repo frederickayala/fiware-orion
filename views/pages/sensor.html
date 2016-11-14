@@ -2,6 +2,14 @@
 	<div flex layout="row" layout-align="space-around stretch" layout-wrap layout-padding layout-fill>
 		<!-- <div flex layout-padding layout-wrap flex id="visualization" style="min-height: 600px; min-width: 600px; width: 600px; height: 600px">
 		</div> -->
+		 <md-content layout-padding layout-wrap flex>
+		    <div>
+		      <md-input-container>
+		        <label>Device Name</label>
+		        <input ng-model="device.device_id" ng-disabled="true">
+		      </md-input-container>
+		    </div>
+		  </md-content>
 		<md-content layout-padding layout-wrap flex>
 			<h5>tilt_x {{data.tilt_x}}</h5>
 			<h5>tilt_y {{data.tilt_y}}</h5>
