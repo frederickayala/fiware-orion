@@ -1,0 +1,19 @@
+<md-sidenav ui-view="aside@" class="md-sidenav-left" id="aside" md-component-id="aside" md-is-locked-open="folded" flex-gt-md="20" flex layout-fill ng-cloak>
+</md-sidenav>    
+<div layout="column" flex id="content" ng-cloak>
+    <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
+        <div class="md-toolbar-tools docs-toolbar-tools" tabindex="-1" role="button" layout-padding>
+            <md-button ng-click="toggleSidenav('aside')" class="md-icon-button" ng-show="!folded">
+              <md-icon md-font-library="material-icons" style="color:white;font:bold;">menu</md-icon>
+            </md-button>
+            <div layout="row" flex="" class="fill-height">
+              <h2 class="md-toolbar-item md-breadcrumb md-headline pull-right">                
+                <h3 ng-bind="$state.current.data.title"></h3>
+              </h2> 
+            </div>
+            <a href="https://www.ioa.mx/" target="_blank"><img src="images/fiware.png" alt="FIWARE" style="max-height: 36px" class="m-r"/></a>
+        </div>        
+    </md-toolbar>
+    <div flex role="main" ui-view="content@" layout="column" ng-cloak>
+    </div>
+</div>

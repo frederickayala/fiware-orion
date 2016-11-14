@@ -1,0 +1,34 @@
+<md-content flex ng-controller="GoalsTrendsController" ng-init="init()" layout-wrap layout-fill md-scroll-y layout="column">
+	<div flex layout="row" layout-align="space-around stretch" layout-wrap layout-padding layout-fill>
+		<md-content layout-padding layout-wrap flex=90 flex-gt-md=45 ng-show="reports.total_packages_per_year">
+			<md-subheader class="md-subhead md-no-sticky md-accent">Ventas por grupos de servicio - Anual a {{this_month}} por fecha de compra</md-subheader>
+		    <canvas id="radar" class="chart chart-line" chart-options="reports.total_packages_per_year.options" chart-series="reports.total_packages_per_year.series" chart-data="reports.total_packages_per_year.data" chart-colors="reports.total_packages_per_year.colours" chart-labels="reports.total_packages_per_year.labels"></canvas> 
+		    <div id="legendDiv"></div>
+		</md-content>
+		<md-content layout-padding layout-wrap flex=90 flex-gt-md=45 ng-show="reports.total_packages_per_month">
+			<md-subheader class="md-subhead md-no-sticky md-accent">Ventas por grupos de servicio - Mensual por fecha de Compra</md-subheader>
+		    <canvas id="line_1" class="chart chart-line" chart-data="reports.total_packages_per_month.data" chart-labels="reports.total_packages_per_month.labels" chart-colors="reports.total_packages_per_month.colours" chart-series="reports.total_packages_per_month.series" click="onClick" chart-options="reports.total_packages_per_month.options">
+			</canvas>
+		</md-content>
+		<md-content layout-padding layout-wrap flex=90 flex-gt-md=45 ng-show="reports.attendance_per_package_per_year">
+			<md-subheader class="md-subhead md-no-sticky md-accent">Asistencia por grupos de servicio - Anual a {{this_month}} por fecha de Expiración</md-subheader>
+		    <canvas id="line_1" class="chart chart-line" chart-data="reports.attendance_per_package_per_year.data" chart-labels="reports.attendance_per_package_per_year.labels" chart-colors="reports.attendance_per_package_per_year.colours" chart-series="reports.attendance_per_package_per_year.series" click="onClick" chart-options="reports.attendance_per_package_per_year.options">
+			</canvas>
+		</md-content>
+		<md-content layout-padding layout-wrap flex=90 flex-gt-md=45 ng-show="reports.attendance_per_package_per_month">
+			<md-subheader class="md-subhead md-no-sticky md-accent">Asistencia por grupos de servicio - Mensual por fecha de Expiración</md-subheader>
+		    <canvas id="line_1" class="chart chart-line" chart-data="reports.attendance_per_package_per_month.data" chart-labels="reports.attendance_per_package_per_month.labels" chart-colors="reports.attendance_per_package_per_month.colours" chart-series="reports.attendance_per_package_per_month.series" click="onClick" chart-options="reports.attendance_per_package_per_month.options">
+			</canvas>
+		</md-content>
+		<md-content layout-padding layout-wrap flex=90 flex-gt-md=45 ng-show="reports.percentage_attendance_per_package_per_year">
+			<md-subheader class="md-subhead md-no-sticky md-accent">Porcentaje de asistencia por grupos de servicio - Anual a {{this_month}} por fecha de Expiración</md-subheader>
+		    <canvas id="line_1" class="chart chart-line" chart-data="reports.percentage_attendance_per_package_per_year.data" chart-labels="reports.percentage_attendance_per_package_per_year.labels" chart-colors="reports.percentage_attendance_per_package_per_year.colours" chart-series="reports.percentage_attendance_per_package_per_year.series" click="onClick" chart-options="reports.percentage_attendance_per_package_per_year.options">
+			</canvas>
+		</md-content>
+		<md-content layout-padding layout-wrap flex=90 flex-gt-md=45 ng-show="reports.percentage_attendance_per_package_per_month">
+			<md-subheader class="md-subhead md-no-sticky md-accent">Porcentaje de asistencia por grupos de servicio - Mensual por fecha de Expiración</md-subheader>
+		    <canvas id="line_1" class="chart chart-line" chart-data="reports.percentage_attendance_per_package_per_month.data" chart-labels="reports.percentage_attendance_per_package_per_month.labels" chart-colors="reports.percentage_attendance_per_package_per_month.colours" chart-series="reports.percentage_attendance_per_package_per_month.series" click="onClick" chart-options="reports.percentage_attendance_per_package_per_month.options">
+			</canvas>
+		</md-content>
+	</div>
+</md-content>

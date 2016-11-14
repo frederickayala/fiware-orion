@@ -1,0 +1,19 @@
+@-webkit-keyframes moveUp {
+from {background-position: top;}
+to {background-position: bottom;}
+}
+ 
+@keyframes moveUp {
+from {background-position: top;}
+to {background-position: bottom;}
+}
+
+@-webkit-keyframes static {
+from {background-position: top;}
+to {background-position: top;}
+}
+ 
+@keyframes static {
+from {background-position: top;}
+to {background-position: top;}
+}
